@@ -1,0 +1,138 @@
+.containerTitle{
+    display: flex;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+  
+.AddEmployeeTitlecontainer{
+    display: flex;
+}
+
+.one{
+    flex: 1;
+    padding: 10px;
+}
+
+.addEmployeeBtnContainer{
+    flex: 1;
+    background: rgb(207, 205, 205);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.table{
+    margin-top: 20px;
+    padding: 20px;
+    background: rgb(207, 205, 205);
+}
+
+.addNewEmployeeBtn{
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    line-height: 28px;
+    color: white;
+    border-radius: 5px;
+    background: rgb(11, 161, 11);
+    margin-top: 18px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.addEmployeeTitlecontainer{
+    background: rgb(207, 205, 205);
+    padding: 20px 20px 0px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.editEmployee{
+    background: rgb(207, 205, 205);
+    padding: 20px 20px 0px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    border-top-left-radius: 10px;
+}
+
+.oneTitle{
+    flex: 1;
+    padding: 10px;
+    background: grey;
+    color: white;
+}
+
+.name{
+    padding: 0px 15px 15px 20px;
+    background: rgb(207, 205, 205);
+
+}
+
+.position{
+    background: rgb(207, 205, 205);
+    padding: 0px 15px 15px 20px;
+}
+
+.input{
+    border: none;
+    height: 32px;
+    padding-left: 10px;
+    width: 60%;
+    border-radius: 5px;
+}
+
+.positonInput{
+    border: none;
+    height: 32px;
+    padding-left: 10px;
+    width: 60%;
+    border-radius: 5px;
+}
+
+.SaveBtn{
+    background: green;
+    color: white;
+    border: none;
+    width: 70px;
+    height: 30px;
+    cursor: ponter;
+    border-radius: 3px;
+}
+
+.submitBtnContainer{
+    background: rgb(207, 205, 205);
+    padding: 0px 0px 20px 20px;
+}
+
+.two{
+    flex: 1;
+    padding: 10px;
+}
+
+.twoTitle{
+    flex: 1;
+    padding: 10px;
+    background: grey;
+    color: rgb(207, 205, 205);
+}
+
+.three{
+    flex: 1;
+    padding: 10px;
+}
+
+.threeTitle{
+    flex: 1;
+    padding: 10px;
+    background: grey;
+    color: white;
+}
+
+.containerListItem{
+    display: flex;
+    
+}

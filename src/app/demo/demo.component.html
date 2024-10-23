@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class="addEmployeeContainer">
+            <h2 [ngStyle]="{'text-align':'center'}">Registration Form</h2>
+            <div class="addEmployeeBtnContainer">
+                <button class="addNewEmployeeBtn" (click)="addEmployeeBtn()">
+                    Add
+                </button>
+            </div>
+            <div *ngIf="newEmployeeClicked">
+                <div class="formWrapper">
+                    <form #data="ngForm" (ngSubmit)="addEmployee(data)">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <input 
+                                type="tel" 
+                                class="form-control" 
+                                id="position" 
+                                name="position" 
+                                [(ngModel)]="model.position" 
+                                placeholder="Enter your mobile number" 
+                                required 
+                                minlength="10" 
+                                maxlength="10" 
+                                pattern="[0-9]*">
+                        </div>
+                        <div  class="form-group"  >
+                            
+                            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="model.email" placeholder="Enter your email" required >
+                            
+                        </div>
+                        
+                        <div class="submitBtnContainer">
+                            <button type="submit" class="SaveBtn" [disabled]="data.invalid">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="table">
+                <div class="containerTitle">
+                    <div class="oneTitle">Name</div>
+                    <div class="twoTitle">Number</div>
+                    <div class="threeTitle">Email</div>
+                
+                </div>
+                <div class="containerListItem" *ngFor="let employ of employee; let i = index" [style.background-color]="changeColorOne()">
+                    <div class="one">{{ employ.name }}</div>
+                    <div class="two">{{ employ.position }}</div>
+                    <div class="three">{{ employ.email }}</div>
+                    <div class="four">
+                        <button class="btn btn-primary" (click)="editEmployee(i)">Edit</button>
+                        <button class="btn btn-danger" (click)="deleteEmployee(i)">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editEmployee" *ngIf="myValue >= 0">
+                <h3>Edit Employee</h3>
+                <form (ngSubmit)="updateEmployee()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="editName" name="editName" [(ngModel)]="model2.name" placeholder="Enter name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="editPosition" name="editPosition" [(ngModel)]="model2.position" placeholder="Enter position" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="editEmail" name="editEmail" [(ngModel)]="model2.email" placeholder="Enter email" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
