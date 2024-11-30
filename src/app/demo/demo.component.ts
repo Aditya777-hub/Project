@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormsModule, NgForm, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-demo',
   standalone: true,
@@ -79,6 +80,7 @@ export class DemoComponent {
   changeColorOne() {
       return this.color ? '#ffffff' : '#f6f6f6';
   }
+
 
 
   }
